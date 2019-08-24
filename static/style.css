@@ -2,6 +2,12 @@
 .navbar {
     background:#fff;
 }
+
+h2{
+    padding-top:10px !important;
+    color:lightgray !important;
+}
+
 body {
     background-color: rgb(73, 96, 113) !important;
 }
