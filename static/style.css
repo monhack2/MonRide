@@ -40,6 +40,14 @@ h2{
 
 .tagline{
     color:lightgray !important;
+
+h2{
+    padding-top:10px !important;
+    color:lightgray !important;
+}
+
+body {
+    background-color: rgb(73, 96, 113) !important;
 }
 .logo{
     max-height: 50px;
