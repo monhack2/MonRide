@@ -6,12 +6,13 @@
         <title>{% block title %}{% endblock %}</title>
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="btn btn-outline-secondary custom-toggle" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <i class="material-icons">menu</i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <a class="navbar-brand" href="#">MonRide</a>
