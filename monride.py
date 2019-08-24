@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask import request
 
 
 app = Flask(__name__)
@@ -12,7 +13,7 @@ from models.user import User
 
 @app.route('/')
 def hello_world():
-    doge = User.query.filter_by(username='doge').first()
+    doge = User.query.filter_by(username=request.args.get('user', 'doge')).first()
     return render_template('index.html', current='home', user=doge)
 
 
