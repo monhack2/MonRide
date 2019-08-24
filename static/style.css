@@ -1,14 +1,20 @@
 /* custom styling */
-.bg-primary {
-  background: #344e86;
-  background: -webkit-gradient(linear, left top, left bottom, from(#344e86), to(rgb(73, 96, 113)));
-  background: linear-gradient(#344e86, rgb(73, 96, 113));
+.logo{
+    max-height: 50px;
 }
 
 #mainNav .nav-link:hover{
     -webkit-transition: all .35s;
     transition: all .35s;
-    color:white;
+    color:rgb(73, 96, 113);
+}
+
+.nav-item .nav-link .active {
+  color:rgb(73, 96, 113);
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
 }
 
 .material-icons {
@@ -19,12 +25,4 @@
 
 .custom-toggle {
     margin-right: 1em;
-}
-#mainNav .navbar-nav > li > a.active {
-  color: #fdcc52 !important;
-  background-color: transparent;
-}
-
-#mainNav .navbar-nav > li > a.active:hover {
-  background-color: transparent;
 }
