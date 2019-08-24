@@ -113,8 +113,11 @@
             card_body.appendChild(card_text);
             card_btn = document.createElement('a');
             card_btn.classList.add("btn");
-            card_btn.onclick = function() {alert('Booked Ride!')};
+         card_btn.classList.add("btn-pooler");
             card_btn.innerHTML = "Book Ride";
+         card_btn.dataset.target = "#exampleModal2";
+         card_btn.dataset.toggle = "modal";
+            card_body.appendChild(card_btn);
 
             document.getElementById("available").appendChild(card)
         </script>
@@ -212,6 +215,22 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" onclick="submit()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal2Label"><i class="material-icons">check</i> Booked!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
