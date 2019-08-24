@@ -9,6 +9,9 @@ class User(db.Model):
     first_name = db.Column(db.String, nullable=False)
     last_name = db.Column(db.String, nullable=False)
     driver = db.Column(db.Boolean, nullable=False)
-    journey_id = db.Column(db.Integer, db.ForeignKey('journey.id'))
     rating = db.Column(db.Float, nullable=False)
+    course = db.Column(db.String, nullable=False)
+    music = db.Column(db.String, nullable=False)
+    interests = db.Column(db.String, nullable=False)
     avatar = db.Column(db.String, nullable=False)
+
