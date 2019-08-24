@@ -35,7 +35,7 @@
                     <i class="material-icons">menu</i>
 
                 </button>
-                <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/poolerlogo.png') }}" alt="pooler." class="logo"/></a>
+                <a class="navbar-brand" href="{{ url_for('hello_world') }}"><img src="{{ url_for('static', filename='img/poolerlogo.png') }}" alt="pooler." class="logo"/></a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if current == 'home' %} active {% endif %} " href="{{ url_for('hello_world') }}">Home</a>
