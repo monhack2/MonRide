@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.min.css" type="text/css"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css" type="text/css"></script>
+
 {% endblock %}
 
 {% block title %}Calender{% endblock %}
@@ -23,8 +30,21 @@
     <div class="container">
        <div class="card ride">
           <h5 class="card-header">August 18 - 24, 2019</h5>
-          <div class="card-body">
-            <script src="https://bundle.run/@fullcalendar/core@4.3.1" type="text/javascript"></script>
+          <div id="calender">
+            <script>
+              $(document).ready(function() {
+
+                $('#calendar').fullCalendar({
+                  theme: true,
+                  header: {
+                    left: 'prev,next,today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                    }
+                });
+
+              });
+            </script>
           </div>
         </div>
     </div>
