@@ -1,2 +1,134 @@
 /* custom styling */
+.navbar {
+    background:#fff;
+}
+.ride{
+    transition:0.5s;
+}
+
+.stars {
+    color: #ffc000;
+}
+
+.card-header{
+    background: rgb(73, 96, 113);
+    color:white;
+}
+
+.gj-datepicker{
+    margin:0 auto;
+}
+
+.col-lg{
+    padding:0.5em;
+}
+
+
+.input-group-append{
+    color:black;
+}
+
+.dropdown-toggle{
+    background:rgb(73, 96, 113);
+    color:white;
+}
+
+h2{
+    padding-top:0.5em;
+    color:white !important;
+}
+
+.tagline{
+    color:lightgray !important;
+}
+.logo{
+    max-height: 50px;
+}
+
+.main-avatar {
+    padding: 2em 0;
+}
+
+.main-avatar img {
+    height: 20vw;
+}
+
+.card {
+    border-radius: 0;
+    box-shadow: 8px 8px #333333;
+}
+
+.main-bg-color,
+.card.main-bg-color {
+    background-color: rgb(73, 96, 113);
+}
+
+/* todo, might be nice */
+.ripple {
+    background-position: center;
+    transition: background 0.7s;
+}
+
+.ripple:hover, .ripple:active {
+    background-color: rgb(57, 76, 91);
+    background-size: 100%;
+    box-shadow: black;
+}
+
+.ripple-clicked {
+    animation: ripple 0.5s;
+}
+
+.card-ripple:hover, .card-ripple:active {
+    background-color: rgb(57, 76, 91);
+    background-size: 100%;
+    transition: background 0.5s;
+    box-shadow: black;
+}
+
+@keyframes ripple {
+    0%, 100% {
+        background-color: rgb(73, 96, 113);
+    }
+    50% {
+        background-color: rgb(106, 142, 169);
+    }
+}
+
+#mainNav .nav-link:hover{
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    color:rgb(73, 96, 113);
+}
+
+.nav-item .nav-link .active {
+  color:rgb(73, 96, 113);
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
+}
+
+.material-icons {
+    vertical-align: middle;
+    padding-bottom: 2px;
+}
+
+
+.custom-toggle {
+    margin-right: 1em;
+}
+
+#mainNav .navbar-nav > li > a.active {
+  color: #fdcc52 !important;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
+}
+
+.custom-card-icon > .material-icons {
+    font-size: 10em;
+}
 

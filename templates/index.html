@@ -1,7 +1,69 @@
 {% extends 'base.html' %}
 
-{% block title %}Hello{% endblock %}
+{% block title %}Home{% endblock %}
+
+{% block top_wide_content %}
+<header class="masthead">
+
+    <div class="main-bg-color h-100 text-center main-avatar">
+        <a href="#"><img src="{{ url_for('static', filename='img/pfpTestSq.jpg')}}" class="rounded-circle img-fluid" alt="pfpTest"></a>
+        <p class="text-white"><br>{{ username }}</p>
+        <p class="stars">
+            {% for _ in range(stars|int) %}
+            <i class="material-icons">star</i>
+            {% endfor %}
+            ({{ stars }})
+        </p>
+    </div>
+</header>
+<br>
+{% endblock %}
 
 {% block content %}
-<p>Hello world!</p>
+  <section class="features" id="features">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="text-center col-lg-8">
+                  <div class="card main-bg-color text-light">
+                      <div class="card-body">
+                          <h3 class="card-title">Arriving: 9 mins (ABC 123)</h3>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+          <div class="row">
+          <div class="col-lg-6">
+              <div class="text-center">
+                  <div class="card main-bg-color text-light ripple">
+                      <div class="card-body blurmap">
+                          <p class="card-text custom-card-icon"><i class="material-icons">search</i></p>
+                          <h3 class="card-title">Find rides</h3>
+                          <a href="#" class="stretched-link"></a>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="text-center">
+                  <div class="card main-bg-color text-light ripple">
+                      <div class="card-body">
+                          <p class="card-text custom-card-icon"><i class="material-icons">calendar_today</i></p>
+                          <h3 class="card-title">Calendar</h3>
+                          <a href="#" class="stretched-link"></a>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}
+<!--
+TODO:
+Redo color of texts
+Do formatting for upcoming ride
+Do formatting for cards
+-->
