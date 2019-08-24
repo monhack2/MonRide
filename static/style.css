@@ -6,6 +6,10 @@
     transition:0.5s;
 }
 
+.stars {
+    color: #ffc000;
+}
+
 .card-header{
     background: rgb(73, 96, 113);
     color:white;
