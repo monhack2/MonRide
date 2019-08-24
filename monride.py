@@ -27,3 +27,6 @@ def book():
 def calendar():
     return render_template('calendar.html', current='calendar')
 
+@app.route('/history')
+def history():
+    return render_template('history.html', current='history')
