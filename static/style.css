@@ -6,6 +6,11 @@
     transition:0.5s;
 }
 
+.card-header{
+    background: rgb(73, 96, 113);
+    color:white;
+}
+
 .gj-datepicker{
     margin:0 auto;
 }
@@ -27,10 +32,12 @@
 }
 
 h2{
-    color:lightgrey !important;
+    padding-top:0.5em;
+    color:white !important;
 }
-body {
-    background-color: rgb(73, 96, 113) !important;
+
+.tagline{
+    color:lightgray !important;
 }
 .logo{
     max-height: 50px;
@@ -45,20 +52,18 @@ body {
 }
 
 .main-bg-color,
-.card.main-bg-color {
+.card.main-bg-color, #dropdownMenu1 {
     background-color: rgb(73, 96, 113);
 }
 
-/* todo, might be nice */
-.ripple {
-    background-position: center;
-    transition: background 0.5s;
+.card-ripple{
+    transition:background 0.5s;
 }
 
-.card-ripple:hover, .card-ripple:active {
+.card-ripple:hover {
     background-color: rgb(57, 76, 91);
     background-size: 100%;
-    transition: background 0.7s;
+    transition: background 0.5s;
     box-shadow: black;
 }
 
