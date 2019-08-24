@@ -9,6 +9,23 @@ body {
     max-height: 50px;
 }
 
+.main-bg-color,
+.card.main-bg-color {
+    background-color: rgb(73, 96, 113);
+}
+
+/* todo, might be nice */
+.card-ripple {
+    background-position: center;
+    transition: background 0.7s;
+}
+
+.card-ripple:active {
+    background-color: rgb(106, 142, 169);
+    background-size: 100%;
+    transition: background 0s;
+}
+
 #mainNav .nav-link:hover{
     -webkit-transition: all .35s;
     transition: all .35s;
@@ -32,3 +49,17 @@ body {
 .custom-toggle {
     margin-right: 1em;
 }
+
+#mainNav .navbar-nav > li > a.active {
+  color: #fdcc52 !important;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
+}
+
+.custom-card-icon > .material-icons {
+    font-size: 10em;
+}
+
