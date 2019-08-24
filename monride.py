@@ -20,3 +20,7 @@ def hello_world():
 @app.route('/book')
 def book():
     return render_template('book.html', current='book')
+
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html', current='calendar')
