@@ -6,12 +6,6 @@
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.min.css" type="text/css"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css" type="text/css"></script>
-
 {% endblock %}
 
 {% block title %}Calender{% endblock %}
@@ -27,27 +21,21 @@
         </div>
     </section>
     <section>
-    <div class="container">
-       <div class="card ride">
-          <h5 class="card-header">August 18 - 24, 2019</h5>
-          <div id="calender">
-            <script>
-              $(document).ready(function() {
-
-                $('#calendar').fullCalendar({
-                  theme: true,
-                  header: {
-                    left: 'prev,next,today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
-                    }
+        <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/moment.min.js'></script>
+        <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery.min.js'></script>
+        <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js'></script>
+        <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>        
+        <script>
+            $(document).ready(function() {
+                $('#calendar1').fullCalendar({
+                    defaultDate: '2014-09-12',
+                    editable: true,
+                    eventLimit: true, // allow "more" link when too many events
                 });
+            });
+        </script>
+    <div id="calendar1"></div>
 
-              });
-            </script>
-          </div>
-        </div>
-    </div>
     </section>
     <hr>
     <section>
