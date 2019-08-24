@@ -7,6 +7,6 @@ class User(db.Model):
     email = db.Column(db.String, unique=True, nullable=False)
     first_name = db.Column(db.String, unique=True, nullable=False)
     last_name = db.Column(db.String, unique=True, nullable=False)
-    driver = db.Column(db.Boolean)
+    driver = db.Column(db.Boolean, nullable=False)
     rating = db.Column(db.Float)
 
