@@ -2,11 +2,16 @@
 .navbar {
     background:#fff;
 }
-body {
-    background-color: rgb(73, 96, 113) !important;
-}
 .logo{
     max-height: 50px;
+}
+
+.main-avatar {
+    padding: 2em 0;
+}
+
+.main-avatar img {
+    height: 20vw;
 }
 
 .main-bg-color,
