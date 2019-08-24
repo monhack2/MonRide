@@ -43,18 +43,13 @@
     color: white;
 }
 
-h2{
+.container > h2, .section-heading > h2{
     padding-top:0.5em;
     color:white !important;
 }
 
 .tagline {
     color: lightgray !important;
-}
-
-h2{
-    padding-top:10px !important;
-    color:lightgray !important;
 }
 
 .logo{
@@ -146,3 +141,7 @@ h2{
     font-size: 10em;
 }
 
+.fc-event{
+    color:white !important;
+    padding:1em;
+}
