@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block sheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+{% endblock %}
+
+{% block title %}History{% endblock %}
+
+{% block content %}
+    <header class="masthead main-bg-color">
+    <section>
+        <div class="container">
+            <div class="section-heading text-center">
+            <h2>History</h2>
+            <p class="tagline">View and rate your recent transactions.</p>
+            <hr>
+          </div>
+        </div>
+    </section>
+    </header>
+    <section>
+    <div class="container" id="available">
+       <div class="card ride">
+          <h5 class="card-header">Morning - 1/1/1970</h5>
+          <div class="card-body">
+            <h5 class="card-title">Driver: <a href="">Pepe</a></h5>
+            <a href="#" class="btn btn-primary">Rate </a>
+            {% for _ in range(5) %}
+            <i class="material-icons">star</i>
+            {% endfor %}
+          </div>
+        </div>
+        <br>
+        <div class="card ride">
+                <h5 class="card-header">Afternoon - 1/1/1970</h5>
+                <div class="card-body">
+                <h5 class="card-title">Driver: <a href="">Doge</a></h5>
+                <a href="#" class="btn btn-primary">Rate </a>
+                {% for _ in range(5) %}
+                <i class="material-icons">star</i>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+        <div class="card ride">
+                <h5 class="card-header">Morning - 2/1/1970</h5>
+                <div class="card-body">
+                <h5 class="card-title">Driver: <a href="">Reaffie</a></h5>
+                <a href="#" class="btn btn-primary">Rate </a>
+                {% for _ in range(5) %}
+                <i class="material-icons">star</i>
+                {% endfor %}
+            </div>
+        </div>
+        <br>
+        <div class="card ride">
+                <h5 class="card-header">Morning - 10/1/1970</h5>
+                <div class="card-body">
+                <h5 class="card-title">Driver: <a href="">t.Dwier</a></h5>
+                <a href="#" class="btn btn-primary">Rate </a>
+                {% for _ in range(5) %}
+                <i class="material-icons">star</i>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </section>
+    <br>
+    <script>
+    function filter(){
+        campus = document.getElementById("campusContent").innerHTML;
+        if(campus === "Campus"){
+            campus = "";
+        }
+        category = document.getElementById("categoryContent").innerHTML;
+        if(category === "Looking For"){
+            category = "";
+        }
+        dateTime = document.getElementById("datetimeContent").value;
+        if(dateTime !== ""){
+            date = dateTime.split(" ")[0];
+            time = dateTime.split(" ")[1];
+        }
+        console.log(date)
+    }
+
+    function display(campus, category, date, time){
+        array.forEach(function (item, index){
+            
+        })
+    }
+    </script>
+{% endblock %}
