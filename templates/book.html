@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block sheets %}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="{{ url_for('static', filename='js/moment-with-locales.js') }}"></script>
@@ -27,7 +26,7 @@
     <div class="row text-center ">
         <div class="col-lg">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" id="categoryContent"
+              <button class="btn btn-pooler dropdown-toggle" id="categoryContent"
                       type="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">Looking For</button>
               <div class="dropdown-menu" id="category">
@@ -40,7 +39,7 @@
         </div>
         <div class="col-lg">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" id="campusContent"
+              <button class="btn btn-pooler dropdown-toggle" id="campusContent"
                       type="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">Campus</button>
               <div class="dropdown-menu" id="campus">
@@ -71,13 +70,18 @@
             </div>
             <script type="text/javascript">
                 $(function () {
-                    $('#datetimepicker1').datetimepicker();
+                    $('#datetimepicker1').datetimepicker({
+                        icons: {
+                            time: 'fa fa-clock'
+                        },
+                        locale: 'en-au'
+                    });
                 });
             </script>
         </div>
     {% if user.driver %}
         <div class="col-lg">
-            <button type="button" class="btn btn-secondary">Create Ride</button>
+            <button type="button" class="btn btn-pooler">Create Ride</button>
             </div>
             </div>
     {% endif %}
