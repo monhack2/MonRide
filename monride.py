@@ -13,7 +13,13 @@ from models.user import User
 @app.route('/')
 def hello_world():
     doge = User.query.filter_by(username='doge').first()
-    return render_template('profile.html', current='home', user=doge)
+    return render_template('index.html', current='home', user=doge)
+
+
+@app.route('/profile')
+def profile_page():
+    doge = User.query.filter_by(username='doge').first()
+    return render_template('profile.html', user=doge)
 
 
 @app.route('/book')
