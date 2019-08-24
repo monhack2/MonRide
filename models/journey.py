@@ -1,8 +1,6 @@
 from monride import db
-from .user import User
-from .destination import Destination
 
 class Journey(db.Model):
+    __tablename__ = 'journey'
     id = db.Column(db.Integer, primary_key=True)
-    driver = db.Column()
-    user = db.relationship('User', backref=db.backref('users', lazy=True))
+    passengers = db.relationship('User', backref='passenger', lazy=True)

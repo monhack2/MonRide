@@ -33,7 +33,7 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if current == 'home' %} active {% endif %} " href="{{ url_for('hello_world') }}">Home</a>
                         <a class="nav-item nav-link {% if current == 'book' %} active {% endif %} " href="{{ url_for('book') }}">Book</a>
-                        <a class="nav-item nav-link {% if current == 'calendar' %} active {% endif %} " href="#">Calendar</a>
+                        <a class="nav-item nav-link {% if current == 'calendar' %} active {% endif %} " href="{{ url_for('calendar') }}">Calendar</a>
                         <a class="nav-item nav-link {% if current == 'history' %} active {% endif %} " href="#">History</a>
                     </div>
                 </div>
@@ -52,8 +52,6 @@
   </footer>
         <script src="{{ url_for('static', filename='js/rippler.js') }}"></script>
           <!-- Custom scripts for this template -->
-        <script src="{{ url_for('static', filename='js/new-age.min.js') }}"></script>
-
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
