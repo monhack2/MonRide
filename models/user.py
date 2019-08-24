@@ -10,4 +10,5 @@ class User(db.Model):
     last_name = db.Column(db.String, nullable=False)
     driver = db.Column(db.Boolean, nullable=False)
     rating = db.Column(db.Float)
+    journey_id = db.Column(db.Integer, db.ForeignKey('journey.id'), nullable=False)
 
