@@ -9,10 +9,10 @@ db = SQLAlchemy(app)
 
 
 from models.user import User
-doge = User.query.filter_by(username='doge').first()
 
 @app.route('/')
 def hello_world():
+    doge = User.query.filter_by(username='doge').first()
     return render_template('index.html', current='home', username=doge.username, stars=doge.rating)
 
 
