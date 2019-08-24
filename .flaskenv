@@ -1,0 +1,2 @@
+FLASK_APP=monride.py
+FLASK_ENV=development
