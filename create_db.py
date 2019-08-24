@@ -2,6 +2,7 @@ from monride import db
 from models.user import User
 from models.destination import Destination
 from models.available import Available
+from models.events import CalendarEvent
 
 db.drop_all()
 

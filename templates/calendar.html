@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
 
 {% block sheets %}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-    
 
     <link href='static/packages/core/main.css' rel='stylesheet' />
     <link href='static/packages/daygrid/main.css' rel='stylesheet' />
@@ -16,6 +14,10 @@
     <script src='static/packages/daygrid/main.js'></script>
     <script src='static/packages/timegrid/main.js'></script>
     <script src='/static/packages/list/main.js'></script>
+
+     <script src="{{ url_for('static', filename='js/moment-with-locales.js') }}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
 {% endblock %}
 
 {% block title %}Calendar{% endblock %}
@@ -34,9 +36,12 @@
       <div class="container">
         <div class="card">
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
+                let events = [{ title: 'FIT2101', start: '2019-08-29T11:00', end: '2019-08-29T14:00' },
+                        {title: 'FIT2099', start: '2019-08-26T09:00', end: '2019-08-26T12:00'},
+                    {title: 'MAT1841', start: '2019-08-27T08:00', end: '2019-08-27T09:30'}];
+                function runCal() {
                   var calendarEl = document.getElementById('calendar');
-              
+                  calendarEl.innerHTML = "";
                   var calendar = new FullCalendar.Calendar(calendarEl, {
                     plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
                     height: 'parent',
@@ -52,29 +57,17 @@
                     select: false, // <-- code function for when something is selected here
                     editable: false,
                     eventlimit: false,
-                    events: [
-                      {
-                        title: 'FIT2101',
-                        start: '2019-08-29T11:00',
-                        end: '2019-08-29T14:00'
-                      },
-                        {
-                        title: 'FIT2099',
-                        start: '2019-08-26T09:00',
-                        end: '2019-08-26T12:00'
-                      }
-                    ],
+                    events: events,
                     allDaySlot: false,
                     minTime: "06:00:00",
                     maxTime: "21:00:00"
                   });
-              
                   calendar.render();
                   let test = calendar.getEvents();
-                  const starts = new Array(5).fill(null);
-                  const ends = new Array(5).fill(null);
+                  const starts = new Array(7).fill(null);
+                  const ends = new Array(7).fill(null);
                   test.forEach(function (item) {
-                      i = item._instance.range.start.getDay() - 1;
+                      i = item._instance.range.start.getDay();
                       if(starts[i] === null || starts[i][1] > item._instance.range.start.getUTCHours()){
                           starts[i] = [item._def.title,item._instance.range.start.getUTCHours()];
                       }
@@ -82,8 +75,17 @@
                           ends[i] = [item._def.title,item._instance.range.end.getUTCHours()];
                       }
                   });
-                  console.log(ends);
-                });
+                }
+
+                function submit(){
+                      let name = document.getElementById("inputName").value;
+                      let start = new Date(document.getElementById("datetimeContent1").value);
+                      let end = new Date(document.getElementById("datetimeContent1").value);
+                      events.push({title: name, start: start, end: end});
+                    runCal();
+                }
+
+                document.addEventListener('DOMContentLoaded', function(){ runCal() });
               </script>
               <div id="calendar" class="card-body"></div>
         </div>   
@@ -98,13 +100,75 @@
               <div class="card main-bg-color text-light">
                 <div class="card-body">
                   <h3 class="card-title">Edit Calendar</h3>
-                  <a href="#" class="stretched-link"></a>
+                  <a href="#" data-toggle="modal" data-target="#modal" class="stretched-link"></a>
                 </div>
               </div>
               <br>
             </div>
           </div>
-
+                <!-- Modal -->
+            <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header main-bg-color">
+                    <h5 class="modal-title" id="ModalLabel" style="color:white;">Add New Event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputName" class="col-sm-2 col-form-label">Event Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="inputName" placeholder="Event Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="startTime" class="col-sm-2 col-form-label">Start Time</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                       <input type="text" id="datetimeContent1" class="form-control datetimepicker-input" data-target="#datetimepicker1" value=""/>
+                                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="endTime" class="col-sm-2 col-form-label">End Time</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                       <input type="text" id="datetimeContent2" class="form-control datetimepicker-input" data-target="#datetimepicker1" value=""/>
+                                        <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker2').datetimepicker();
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" onclick="submit()">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           <div class="col-lg">
             <div class="text-center">
               <div class="card main-bg-color text-light">
