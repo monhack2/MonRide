@@ -19,12 +19,6 @@
     padding:0.5em;
 }
 
-.ride:hover {
-    transition: 0.5s;
-    -moz-box-shadow:    0 0.3em 0 0.3em #404040;
-    -webkit-box-shadow: 0 0.3em 0 0.3em #404040;
-    box-shadow:         0 0.3em 0 0.3em #404040;
-}
 
 .input-group-append, .dropdown-toggle{
     background:white;
