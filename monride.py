@@ -8,7 +8,7 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html', current='home')
+    return render_template('index.html', current='home', username='Dogge', stars=4.6)
 
 
 @app.route('/book')
