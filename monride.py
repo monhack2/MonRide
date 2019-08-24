@@ -17,6 +17,12 @@ def hello_world():
     return render_template('index.html', current='home', user=doge)
 
 
+@app.route('/profile')
+def profile_page():
+    doge = User.query.filter_by(username=request.args.get('user', 'doge')).first()
+    return render_template('profile.html', user=doge)
+
+
 @app.route('/book')
 def book():
     user = User.query.filter_by(username='user2').first()
