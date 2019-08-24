@@ -21,24 +21,25 @@
         </div>
     </section>
     </header>
-    <section>
-    <div class="row text-center justify-content-center">
-        <div class="col-lg-2">
+    <section class="container">
+    <div class="row text-center ">
+        <div class="col-lg">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle"
                       type="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
 
-                Type of Ride
+                Looking For
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                   <a class="dropdown-item" href="#!">Drivers</a>
-                  <a class="dropdown-item" href="#!">Riders</a>
-                  <a class="dropdown-item" href="#!">Both</a>
+                  {% if user.driver %}
+                  <a class="dropdown-item" href="#!">Passengers</a>
+                  {% endif %}
               </div>
             </div>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg">
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle"
                       type="button" data-toggle="dropdown"
@@ -53,21 +54,7 @@
               </div>
             </div>
             </div>
-    <div class="col-lg-2">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle"
-                      type="button" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                Distance
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">1-5km</a>
-                  <a class="dropdown-item" href="#!">1-10km</a>
-                  <a class="dropdown-item" href="#!">1-15km</a>
-              </div>
-            </div>
-            </div>
-        <div class="col-lg-2">
+        <div class="col-lg">
 
             <input id="datepicker" width="250" />
             <script>
@@ -76,6 +63,12 @@
                 });
             </script>
         </div>
+    {% if user.driver %}
+        <div class="col-lg">
+            <button type="button" class="btn btn-secondary">Create Ride</button>
+            </div>
+            </div>
+    {% endif %}
     </div>
     </section>
     <hr>
