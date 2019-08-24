@@ -6,7 +6,7 @@
         <title>{% block title %}{% endblock %}</title>
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        {% block sheets %}{% endblock %}
         <!-- Custom fonts for this template -->
         <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css')}}">
@@ -26,7 +26,7 @@
                     <i class="material-icons">menu</i>
 
                 </button>
-                <a class="navbar-brand" href="#">MonRide</a>
+                <a class="navbar-brand" href="#">pooler.</a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if current == 'home' %} active {% endif %} " href="{{ url_for('hello_world') }}">Home</a>
@@ -51,9 +51,6 @@
       <p>&copy; Your Website 2019. All Rights Reserved.</p>
     </div>
   </footer>
-          <!-- Custom scripts for this template -->
-        <script src="{{ url_for('static', filename='js/new-age.min.js') }}"></script>
-
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

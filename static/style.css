@@ -2,6 +2,33 @@
 .navbar {
     background:#fff;
 }
+.ride{
+    transition:0.5s;
+}
+
+.gj-datepicker{
+    margin:0 auto;
+}
+
+.col-lg{
+    padding:0.5em;
+}
+
+.ride:hover {
+    transition: 0.5s;
+    -moz-box-shadow:    0 0.3em 0 0.3em #404040;
+    -webkit-box-shadow: 0 0.3em 0 0.3em #404040;
+    box-shadow:         0 0.3em 0 0.3em #404040;
+}
+
+.input-group-append, .dropdown-toggle{
+    background:white;
+    color:black;
+}
+
+h2{
+    color:lightgrey !important;
+}
 body {
     background-color: rgb(73, 96, 113) !important;
 }
@@ -20,10 +47,11 @@ body {
     transition: background 0.7s;
 }
 
-.card-ripple:active {
-    background-color: rgb(106, 142, 169);
+.card-ripple:hover, .card-ripple:active {
+    background-color: rgb(57, 76, 91);
     background-size: 100%;
-    transition: background 0s;
+    transition: background 0.7s;
+    box-shadow: black;
 }
 
 #mainNav .nav-link:hover{
