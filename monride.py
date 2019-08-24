@@ -15,6 +15,6 @@ def hello_world():
 def book():
     return render_template('book.html', current='book')
 
-@app.route('/calender')
-def calender():
-    return render_template('calender.html', current='calender')
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html', current='calendar')
