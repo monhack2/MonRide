@@ -31,67 +31,74 @@
         </div>
     </section>
     <section>
-      <div class="card">       
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-        
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-              plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
-              height: 'parent',
-              header: {
-                left: 'prev',
-                center: 'title',
-                right: 'next'
-              },
-              defaultView: 'dayGridMonth',
-              defaultDate: '2019-01-01',
-              selectable: true,
-              selectMirror: true,
-              select: undefined // <-- code function for when something is selected here
-            });
-        
-            calendar.render();
-          });
-        
-        </script>
-        <div id="calendar" class="card-body"></div>
+      <div class="container">
+        <div class="card">
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  var calendarEl = document.getElementById('calendar');
+              
+                  var calendar = new FullCalendar.Calendar(calendarEl, {
+                    plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+                    height: 'parent',
+                    header: {
+                      left: 'prev',
+                      center: 'title',
+                      right: 'next'
+                    },
+                    defaultView: 'timeGridWeek',
+                    selectable: true,
+                    selectMirror: true,
+                    select: undefined // <-- code function for when something is selected here
+                  });
+              
+                  calendar.render();
+                });
+              
+              </script>
+              <div id="calendar" class="card-body"></div>
+        </div>   
       </div>
     </section>
-    <hr>
+    <br>
     <section>
-      <div class="text-center">
-        <div class="card main-bg-color text-light">
-          <div class="card-body">
-            <h3 class="card-title">Edit Calendar</h3>
-            <a href="#" class="stretched-link"></a>
+      <div class="container">
+        <div class="text-center">
+          <div class="card main-bg-color text-light">
+            <div class="card-body">
+              <h3 class="card-title">Edit Calendar</h3>
+              <a href="#" class="stretched-link"></a>
+            </div>
           </div>
+          <br>
         </div>
-        <br>
-      </div>
-    </section>
-
-    <section>
-      <div class="text-center">
-        <div class="card main-bg-color text-light">
-          <div class="card-body">
-            <h3 class="card-title">Generate Ride Times</h3>
-            <a href="#" class="stretched-link"></a>
-          </div>
-        </div>
-        <br>
       </div>
     </section>
 
     <section>
-      <div class="text-center">
-        <div class="card main-bg-color text-light">
-          <div class="card-body">
-            <h3 class="card-title">Set Ride Times</h3>
-            <a href="#" class="stretched-link"></a>
+      <div class="container">
+        <div class="text-center">
+          <div class="card main-bg-color text-light">
+            <div class="card-body">
+              <h3 class="card-title">Generate Ride Times</h3>
+              <a href="#" class="stretched-link"></a>
+            </div>
           </div>
+          <br>
         </div>
-        <br>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <div class="card main-bg-color text-light">
+            <div class="card-body">
+              <h3 class="card-title">Set Ride Times</h3>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <br>
+        </div>
       </div>
     </section>
 
