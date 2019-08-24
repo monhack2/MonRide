@@ -6,16 +6,25 @@
         <title>{% block title %}{% endblock %}</title>
         <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="{{ url_for('static', filename='css/new-age.min.css')}}" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
             <div class="container">
-                <button class="btn btn-outline-secondary custom-toggle" type="button" data-toggle="collapse" data-target="#navbarNav">
-                    <i class="material-icons">menu</i>
+                <a class="navbar-brand" href="#">MonRide</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a class="navbar-brand" href="#">MonRide</a>
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if current == 'home' %} active {% endif %} " href="#">Home</a>
                         <a class="nav-item nav-link {% if current == 'book' %} active {% endif %} " href="#">Book</a>
@@ -26,10 +35,28 @@
             </div>
         </nav>
 
-
         <div class="container">
             {% block content %}{% endblock %}
         </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Your Website 2019. All Rights Reserved.</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="#">Privacy</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">Terms</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+          <!-- Custom scripts for this template -->
+        <script src="{{ url_for('static', filename='js/new-age.min.js') }}"></script>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

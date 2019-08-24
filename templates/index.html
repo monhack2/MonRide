@@ -3,5 +3,38 @@
 {% block title %}Hello{% endblock %}
 
 {% block content %}
-<p>Hello world!</p>
+<header class="masthead">
+    <div class="container h-100" style="background: rgb(73, 96, 113);">
+      <div class="row h-100">
+               <img src="{{ url_for('static', filename='img/pfpTestSq.jpg')}}" class="rounded-circle img-fluid" alt="pfpTest" style="margin: 0 auto;size: portrait;max-height: 100px">
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>Time till next ride goes here</h2>
+        <p class="text-muted">Info info info</p>
+        <hr>
+      </div>
+       <div class="text-center">
+           <div class="card">
+              <img class="card-img" src="/images/pathToYourImage.png" alt="Card image">
+              <div class="card-img-overlay">
+                <p class="card-text">I'm text that has a background image!</p>
+              </div>
+            </div>
+           <br>
+           <div class="card">
+              <img class="card-img" src="/images/pathToYourImage.png" alt="Card image">
+              <div class="card-img-overlay">
+                <p class="card-text">I'm text that has a background image!</p>
+              </div>
+            </div>
+       </div>
+    </div>
+  </section>
 {% endblock %}
