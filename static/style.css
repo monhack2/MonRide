@@ -61,7 +61,7 @@ h2{
 }
 
 .main-bg-color,
-.card.main-bg-color, #dropdownMenu1 {
+.card.main-bg-color {
     background-color: rgb(73, 96, 113);
 }
 
