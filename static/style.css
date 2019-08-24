@@ -33,9 +33,14 @@
     color:black;
 }
 
-.dropdown-toggle{
+.btn-pooler{
     background:rgb(73, 96, 113);
     color:white;
+}
+
+.btn-pooler:hover, .btn-pooler:active, .btn-pooler:focus {
+    background-color: rgb(57, 76, 91);
+    color: white;
 }
 
 h2{
