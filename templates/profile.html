@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block top_wide_content %}
+<header class="masthead">
+
+    <div class="main-bg-color text-center main-avatar" style="background: linear-gradient(to bottom, rgb(73, 96, 113) 50%, #fff 50%);">
+        <a href="#"><img src="{{ url_for('static', filename='img/pfpTestSq.jpg')}}" class="rounded-circle img-fluid img-thumbnail" alt="pfpTest"></a>
+            <!--<p class="stars">
+            {% for _ in range(user.rating|int) %}
+            <i class="material-icons">star</i>
+            {% endfor %}
+            ({{ user.rating }})
+        </p>-->
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+  <section class="features" id="features">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="text-center col-lg-8">
+                  <div class="card main-bg-color text-light">
+                    <div class="card-body">
+                        <h3 class="card-title">{{user.first_name + ' ' + user.last_name}}</h3>
+                        <div class="row">
+                            <div class="col-sm">{{user.course}}<img src="{{ url_for('static', filename='img/pencil.jpg')}}" alt="pfpTest" style="padding-left: 0.5em; float:right", width="60", height="50"></div>
+                            <div class="col-sm">{{user.rating}} <span class="stars">
+                                    {% for _ in range(user.rating|int) %}
+                                    <i class="material-icons">star</i>
+                                    {% endfor %}</div>
+                                    
+                        </div>
+
+                    </div>
+                  </div>
+                  <br>
+              </div>
+          <!--
+          <div class="row">
+          <div class="col-lg-6">
+              <div class="text-center">
+                  <div class="card main-bg-color text-light ripple">
+                      <div class="card-body blurmap">
+                          <p class="card-text custom-card-icon"><i class="material-icons">search</i></p>
+                          <h3 class="card-title">Start Journey</h3>
+                          <a href=" {{ url_for('book') }}" class="stretched-link"></a>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="text-center">
+                  <div class="card main-bg-color text-light ripple">
+                      <div class="card-body">
+                          <p class="card-text custom-card-icon"><i class="material-icons">calendar_today</i></p>
+                          <h3 class="card-title">Calendar</h3>
+                          <a href="#" class="stretched-link"></a>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                    <div class="text-center col-lg-8">
+                        <div class="main-bg-color text-light">
+                            <div class="card main-bg-color text-light">
+                                    <a href="#"></a>
+                                <div class="card-body">
+                                    <h4><img src="{{ url_for('static', filename='img/music.jpg')}}" alt="pfpTest" style="max-height: 2em"> {{user.music}}<img src="{{ url_for('static', filename='img/pencil.jpg')}}" alt="pfpTest" style="padding-left: 0.5em; float:right", width="62", height="50"></h4>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+  </section>
+
+  <br>
+
+  <section class="features" id="features">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="text-center col-lg-8">
+                <div class="main-bg-color text-light">
+                <div class="card main-bg-color text-light">
+                <div class="card-body">
+                <h4>Interests<img src="{{ url_for('static', filename='img/pencil.jpg')}}" alt="pfpTest" style="padding-left: 0.5em; float:right;", width="60", height="50"></h4>
+                <h5>{{user.interests}}</h5>
+
+            </div>
+            </div>
+          </div>
+      </div>
+  </div>
+        </div>
+  </section>
+  
+{% endblock %}
+<!--
+TODO:
+Redo color of texts
+Do formatting for upcoming ride
+Do formatting for cards
+-->

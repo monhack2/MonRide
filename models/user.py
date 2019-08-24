@@ -10,4 +10,7 @@ class User(db.Model):
     last_name = db.Column(db.String, nullable=False)
     driver = db.Column(db.Boolean, nullable=False)
     rating = db.Column(db.Float, nullable=False)
+    course = db.Column(db.String, nullable=False)
+    music = db.Column(db.String, nullable=False)
+    interests = db.Column(db.String, nullable=False)
 
