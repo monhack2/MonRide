@@ -1,40 +1,57 @@
 {% extends 'base.html' %}
 
-{% block title %}Hello{% endblock %}
+{% block title %}Home{% endblock %}
 
-{% block content %}
+{% block top_wide_content %}
 <header class="masthead">
-    <div class="container h-100" style="background: rgb(73, 96, 113);">
+    <div class="main-bg-color h-100">
       <div class="row h-100">
                <img src="{{ url_for('static', filename='img/pfpTestSq.jpg')}}" class="rounded-circle img-fluid" alt="pfpTest" style="margin: 0 auto;size: portrait;max-height: 100px">
 
         </div>
       </div>
     </div>
-  </header>
+</header>
+<br>
+{% endblock %}
 
+{% block content %}
   <section class="features" id="features">
     <div class="container">
-      <div class="section-heading text-center">
-        <h2>Time till next ride goes here</h2>
-        <p class="text-muted">Info info info</p>
-        <hr>
+      <div class="text-center">
+          <div class="card main-bg-color text-light">
+              <div class="card-body">
+                  <h3 class="card-title">123ABC: 9 mins</h3>
+              </div>
+          </div>
+          <br>
       </div>
-       <div class="text-center">
-           <div class="card">
-              <img class="card-img" src="/images/pathToYourImage.png" alt="Card image">
-              <div class="card-img-overlay">
-                <p class="card-text">I'm text that has a background image!</p>
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="text-center">
+                  <div class="card main-bg-color text-light">
+                      <div class="card-body">
+                          <p class="card-text custom-card-icon"><i class="material-icons">search</i></p>
+                          <h3 class="card-title">Find rides</h3>
+                          <a href="#" class="stretched-link"></a>
+                      </div>
+                  </div>
+                  <br>
               </div>
-            </div>
-           <br>
-           <div class="card">
-              <img class="card-img" src="/images/pathToYourImage.png" alt="Card image">
-              <div class="card-img-overlay">
-                <p class="card-text">I'm text that has a background image!</p>
+          </div>
+          <div class="col-lg-6">
+              <div class="text-center">
+                  <div class="card main-bg-color text-light">
+                      <div class="card-body">
+                          <p class="card-text custom-card-icon"><i class="material-icons">calendar_today</i></p>
+                          <h3 class="card-title">Calendar</h3>
+                          <a href="#" class="stretched-link"></a>
+                      </div>
+                  </div>
+                  <br>
               </div>
-            </div>
-       </div>
+          </div>
+      </div>
     </div>
   </section>
 {% endblock %}
