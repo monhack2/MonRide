@@ -15,6 +15,7 @@ OR on Unix-like:
 Then for both:
 
     pip install -r requirements.txt
+    python create_db.py
 
 Now we can run it!
 
