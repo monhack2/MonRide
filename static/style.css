@@ -20,15 +20,22 @@
 }
 
 /* todo, might be nice */
-.card-ripple {
+.ripple {
     background-position: center;
-    transition: background 0.7s;
+    transition: background 0.5s;
 }
 
-.card-ripple:active {
-    background-color: rgb(106, 142, 169);
-    background-size: 100%;
-    transition: background 0s;
+.ripple-clicked {
+    animation: ripple 0.5s;
+}
+
+@keyframes ripple {
+    0%, 100% {
+        background-color: rgb(73, 96, 113);
+    }
+    50% {
+        background-color: rgb(106, 142, 169);
+    }
 }
 
 #mainNav .nav-link:hover{
