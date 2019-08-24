@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <h3 class="card-title">{{user.first_name + ' ' + user.last_name}}</h3>
                         <div class="row">
-                            <div class="col-sm">{{user.course}}<img src="{{ url_for('static', filename='img/pencil.jpg')}}" alt="pfpTest" style="padding-left: 0.5em; float:right", width="60", height="50"></div>
+                            <div class="col-sm">{{user.course}} <button class="btn btn-light"><i class="material-icons">edit</i></button> </div>
                             <div class="col-sm">{{user.rating}} <span class="stars">
                                     {% for _ in range(user.rating|int) %}
                                     <i class="material-icons">star</i>
@@ -44,7 +44,7 @@
                             <div class="card main-bg-color text-light">
                                     <a href="#"></a>
                                 <div class="card-body">
-                                    <h4><img src="{{ url_for('static', filename='img/music.jpg')}}" alt="pfpTest" style="max-height: 2em"> {{user.music}}<img src="{{ url_for('static', filename='img/pencil.jpg')}}" alt="pfpTest" style="padding-left: 0.5em; float:right", width="62", height="50"></h4>
+                                    <h4><img src="{{ url_for('static', filename='img/music.jpg')}}" alt="pfpTest" style="max-height: 2em"> {{user.music}} <button class="btn btn-light float-right"><i class="material-icons">edit</i></button></h4>
 
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                 <div class="main-bg-color text-light">
                 <div class="card main-bg-color text-light">
                 <div class="card-body">
-                <h4>Interests<img src="{{ url_for('static', filename='img/pencil.jpg')}}" alt="pfpTest" style="padding-left: 0.5em; float:right;", width="60", height="50"></h4>
+                    <h4>Interests <button class="btn btn-light float-right"><i class="material-icons">edit</i></button> </h4>
                 <h5>{{user.interests}}</h5>
 
             </div>
