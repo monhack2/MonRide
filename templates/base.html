@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}{% endblock %} | pooler.</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        {% block sheets %}{% endblock %}
         <!-- Custom fonts for this template -->
         <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css')}}">
@@ -28,7 +28,7 @@
                     <i class="material-icons">menu</i>
 
                 </button>
-                <a class="navbar-brand" href="#">MonRide</a>
+                <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/poolerlogo.png') }}" alt="pooler." class="logo"/></a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link {% if current == 'home' %} active {% endif %} " href="{{ url_for('hello_world') }}">Home</a>
