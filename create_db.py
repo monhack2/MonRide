@@ -12,5 +12,7 @@ Dogge = User(username='Dogge', email='Dogge@example.com', driver=False, first_na
 db.session.add(admin)
 db.session.add(guest)
 db.session.add(user1)
+db.session.add(user2)
+db.session.add(Dogge)
 db.session.commit()
 
