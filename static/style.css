@@ -51,16 +51,33 @@ h2{
     height: 20vw;
 }
 
+.card {
+    border-radius: 0;
+    box-shadow: 8px 8px #333333;
+}
+
 .main-bg-color,
 .card.main-bg-color, #dropdownMenu1 {
     background-color: rgb(73, 96, 113);
 }
 
-.card-ripple{
-    transition:background 0.5s;
+/* todo, might be nice */
+.ripple {
+    background-position: center;
 }
 
-.card-ripple:hover {
+.ripple:hover, .ripple:active {
+    background-color: rgb(57, 76, 91);
+    background-size: 100%;
+    transition: background 0.7s;
+    box-shadow: black;
+}
+
+.ripple-clicked {
+    animation: ripple 0.5s;
+}
+
+.card-ripple:hover, .card-ripple:active {
     background-color: rgb(57, 76, 91);
     background-size: 100%;
     transition: background 0.5s;
