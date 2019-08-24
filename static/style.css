@@ -1,8 +1,12 @@
 /* custom styling */
-.bg-primary {
-  background: #344e86;
-  background: -webkit-gradient(linear, left top, left bottom, from(#344e86), to(rgb(73, 96, 113)));
-  background: linear-gradient(#344e86, rgb(73, 96, 113));
+.navbar {
+    background:#fff;
+}
+body {
+    background-color: rgb(73, 96, 113) !important;
+}
+.logo{
+    max-height: 50px;
 }
 
 .main-bg-color,
@@ -25,7 +29,15 @@
 #mainNav .nav-link:hover{
     -webkit-transition: all .35s;
     transition: all .35s;
-    color:white;
+    color:rgb(73, 96, 113);
+}
+
+.nav-item .nav-link .active {
+  color:rgb(73, 96, 113);
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+  background-color: transparent;
 }
 
 .material-icons {
@@ -37,6 +49,7 @@
 .custom-toggle {
     margin-right: 1em;
 }
+
 #mainNav .navbar-nav > li > a.active {
   color: #fdcc52 !important;
   background-color: transparent;
@@ -49,3 +62,4 @@
 .custom-card-icon > .material-icons {
     font-size: 10em;
 }
+
