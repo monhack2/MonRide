@@ -29,9 +29,7 @@
 h2{
     color:lightgrey !important;
 }
-body {
-    background-color: rgb(73, 96, 113) !important;
-}
+
 .logo{
     max-height: 50px;
 }
@@ -42,6 +40,11 @@ body {
 
 .main-avatar img {
     height: 20vw;
+}
+
+.card {
+    border-radius: 0;
+    box-shadow: 8px 8px #333333;
 }
 
 .main-bg-color,
