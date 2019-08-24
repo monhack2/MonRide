@@ -48,7 +48,20 @@
                     defaultView: 'timeGridWeek',
                     selectable: true,
                     selectMirror: true,
-                    select: undefined // <-- code function for when something is selected here
+                    selectOverlap: false,
+                    select: undefined, // <-- code function for when something is selected here
+                    editable: false,
+                    eventlimit: false,
+                    events: [
+                      {
+                        title: 'FIT2101',
+                        start: '2019-08-29T11:00',
+                        end: '2019-08-29T14:00'
+                      }
+                    ],
+                    allDaySlot: false,
+                    minTime: "06:00:00",
+                    maxTime: "21:00:00"
                   });
               
                   calendar.render();
