@@ -8,6 +8,7 @@ admin = User(username='admin', email='admin@example.com', first_name='admin', la
 guest = User(username='guest', email='guest@example.com', first_name='guest', last_name='guest')
 user1 = User(username='user1', email='user1@example.com', driver=False, first_name='user', last_name='1')
 user2 = User(username='user2', email='user2@example.com', driver=True, rating=4.6, first_name='user', last_name='2')
+Dogge = User(username='Dogge', email='Dogge@example.com', driver=False, first_name='Dogge', last_name='Smith')
 db.session.add(admin)
 db.session.add(guest)
 db.session.add(user1)
