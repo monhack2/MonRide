@@ -19,6 +19,11 @@
     margin:0 auto;
 }
 
+.blurmap{
+    background-image:url("img/blurmap.png");
+    color:rgb(73, 96, 113);
+}
+
 .col-lg{
     padding:0.5em;
 }
@@ -38,17 +43,15 @@ h2{
     color:white !important;
 }
 
-.tagline{
-    color:lightgray !important;
+.tagline {
+    color: lightgray !important;
+}
 
 h2{
     padding-top:10px !important;
     color:lightgray !important;
 }
 
-body {
-    background-color: rgb(73, 96, 113) !important;
-}
 .logo{
     max-height: 50px;
 }
