@@ -49,7 +49,7 @@
                     selectable: true,
                     selectMirror: true,
                     selectOverlap: false,
-                    select: console.log(this), // <-- code function for when something is selected here
+                    select: false, // <-- code function for when something is selected here
                     editable: false,
                     eventlimit: false,
                     events: [
@@ -136,6 +136,23 @@
     <script>
         function getRide(self){
             console.log(this)
+        }
+
+        function readTextFile(file)
+        {
+           var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function ()
+            {
+                if(rawFile.readyState === 4)
+                {
+                    if(rawFile.status === 200 || rawFile.status == 0)
+                    {
+                        return rawFile.responseText
+                    }
+                }
+            }
+            rawFile.send(null);
         }
     </script>
 {% endblock %}
