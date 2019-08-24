@@ -36,15 +36,23 @@ body {
     max-height: 50px;
 }
 
+.main-avatar {
+    padding: 2em 0;
+}
+
+.main-avatar img {
+    height: 20vw;
+}
+
 .main-bg-color,
 .card.main-bg-color {
     background-color: rgb(73, 96, 113);
 }
 
 /* todo, might be nice */
-.card-ripple {
+.ripple {
     background-position: center;
-    transition: background 0.7s;
+    transition: background 0.5s;
 }
 
 .card-ripple:hover, .card-ripple:active {
@@ -52,6 +60,15 @@ body {
     background-size: 100%;
     transition: background 0.7s;
     box-shadow: black;
+}
+
+@keyframes ripple {
+    0%, 100% {
+        background-color: rgb(73, 96, 113);
+    }
+    50% {
+        background-color: rgb(106, 142, 169);
+    }
 }
 
 #mainNav .nav-link:hover{
