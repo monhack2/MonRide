@@ -6,7 +6,7 @@
 <header class="masthead">
 
     <div class="main-bg-color text-center main-avatar" style="background: linear-gradient(to bottom, rgb(73, 96, 113) 50%, #fff 50%);">
-        <a href="#"><img src="{{ url_for('static', filename='img/pfpTestSq.jpg')}}" class="rounded-circle img-fluid img-thumbnail" alt="pfpTest"></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/avatars/' + user.avatar + '.jpg')}}" class="rounded-circle img-fluid" alt="{{ user.username}}'s picture"></a>
     </div>
 </header>
 {% endblock %}

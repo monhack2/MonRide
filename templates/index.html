@@ -6,7 +6,7 @@
 <header class="masthead">
 
     <div class="main-bg-color h-100 text-center main-avatar">
-        <a href="#"><img src="{{ url_for('static', filename='img/pfpTestSq.jpg')}}" class="rounded-circle img-fluid" alt="pfpTest"></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/avatars/' + user.avatar + '.jpg')}}" class="rounded-circle img-fluid" alt="{{ user.username}}'s picture"></a>
         <p class="text-white"><br>{{ user.username }}</p>
         <p class="stars">
             {% for _ in range(user.rating|int) %}

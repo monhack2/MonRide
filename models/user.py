@@ -13,4 +13,5 @@ class User(db.Model):
     course = db.Column(db.String, nullable=False)
     music = db.Column(db.String, nullable=False)
     interests = db.Column(db.String, nullable=False)
+    avatar = db.Column(db.String, nullable=False)
 
