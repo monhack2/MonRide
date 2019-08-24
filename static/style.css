@@ -55,7 +55,17 @@ h2{
 /* todo, might be nice */
 .ripple {
     background-position: center;
-    transition: background 0.5s;
+}
+
+.ripple:hover, .ripple:active {
+    background-color: rgb(57, 76, 91);
+    background-size: 100%;
+    transition: background 0.7s;
+    box-shadow: black;
+}
+
+.ripple-clicked {
+    animation: ripple 0.5s;
 }
 
 .card-ripple:hover, .card-ripple:active {
