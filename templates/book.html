@@ -7,14 +7,14 @@
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
-{% block title %}Book Rides | pooler. {% endblock %}
+{% block title %}Book Rides{% endblock %}
 
 {% block content %}
     <header class="masthead main-bg-color">
     <section>
         <div class="container">
             <div class="section-heading text-center">
-            <h2>Live Rides</h2>
+            <h2>View Rides</h2>
             <p class="tagline">View available rides and book in</p>
             <hr>
           </div>
@@ -28,6 +28,7 @@
               <button class="btn btn-secondary dropdown-toggle"
                       type="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
+
                 Type of Ride
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -42,6 +43,7 @@
               <button class="btn btn-secondary dropdown-toggle"
                       type="button" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
+
                 Campus
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -66,6 +68,7 @@
             </div>
             </div>
         <div class="col-lg-2">
+
             <input id="datepicker" width="250" />
             <script>
                 $('#datepicker').datepicker({
