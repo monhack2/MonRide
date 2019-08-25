@@ -92,43 +92,44 @@
     <section>
     <div class="container" id="available">
         <script>
-            let available = [{name: 'Test Driver', rating: 4.8, arrive: '9:30 AM', distance: 3, campus: "Clayton"}];
+            let available = [{name: 'Test Driver', rating: 4.8, arrive: '9:30 AM', distance: 3, campus: "Clayton", category: "Driver"}];
+            let filtered = [];
 
-            card = document.createElement('div');
-            card.classList.add("card", "ride");
-            card_header = document.createElement('h5');
-            card_header.classList.add("card-header");
-            card_header.innerHTML = available[0]["name"];
-            card.appendChild(card_header);
-            card_body = document.createElement('div');
-            card_body.classList.add("card-body");
-            card.appendChild(card_body);
-            card_title = document.createElement('h5');
-            card_title.classList.add("card-title");
-            card_title.innerHTML = "Wants to Arrive At: " + available[0]["arrive"];
-            card_body.appendChild(card_title);
-            card_text = document.createElement('p');
-            card_text.classList.add("card-text");
-            card_text.innerHTML = available[0]["distance"] + "km away"
-            card_body.appendChild(card_text);
-            card_btn = document.createElement('a');
-            card_btn.classList.add("btn");
-         card_btn.classList.add("btn-pooler");
-            card_btn.innerHTML = "Book Ride";
-         card_btn.dataset.target = "#exampleModal2";
-         card_btn.dataset.toggle = "modal";
-            card_body.appendChild(card_btn);
+            for (let i = 0; i < available.length; i++) {
 
-            document.getElementById("available").appendChild(card)
+            }
+            document.getElementById("available").innerHTML="";
+            for (let i = 0; i < filtered.length; i++) {
+                card = document.createElement('div');
+                card.classList.add("card", "ride");
+                card_header = document.createElement('h5');
+                card_header.classList.add("card-header");
+                card_header.innerHTML = filtered[i]["name"];
+                card.appendChild(card_header);
+                card_body = document.createElement('div');
+                card_body.classList.add("card-body");
+                card.appendChild(card_body);
+                card_title = document.createElement('h5');
+                card_title.classList.add("card-title");
+                card_title.innerHTML = "Wants to Arrive At: " + filtered[i]["arrive"];
+                card_body.appendChild(card_title);
+                card_text = document.createElement('p');
+                card_text.classList.add("card-text");
+                card_text.innerHTML = filtered[i]["distance"] + "km away";
+                card_body.appendChild(card_text);
+                card_btn = document.createElement('a');
+                card_btn.classList.add("btn");
+                card_btn.onclick = function() {alert('Booked Ride!')};
+                card_btn.innerHTML = "Book Ride";
+                card_btn.classList.add("btn-pooler");
+                card_btn.innerHTML = "Book Ride";
+                card_btn.dataset.target = "#exampleModal2";
+                card_btn.dataset.toggle = "modal";
+                card_body.append(card_btn);
+
+                document.getElementById("available").appendChild(card)
+            }
         </script>
-{#       <div class="card ride">#}
-{#          <h5 class="card-header">Driver 1 - 4.8 star rating</h5>#}
-{#          <div class="card-body">#}
-{#            <h5 class="card-title">68% Match</h5>#}
-{#            <p class="card-text">3km away</p>#}
-{#            <a href="#" class="btn btn-primary">Book Ride</a>#}
-{#          </div>#}
-{#        </div>#}
     </div>
     </section>
     <br>
