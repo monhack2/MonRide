@@ -35,12 +35,12 @@
 
 .btn-pooler{
     background:rgb(73, 96, 113);
-    color:white;
+    color:white !important;
 }
 
 .btn-pooler:hover, .btn-pooler:active, .btn-pooler:focus {
     background-color: rgb(57, 76, 91);
-    color: white;
+    color: white !important;
 }
 
 .container > h2, .section-heading > h2{
